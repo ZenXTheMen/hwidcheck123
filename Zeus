@@ -1,0 +1,13 @@
+local hwidWhitelist = {
+     "1C67FFE3-480E-4EFE-931B-C50727023A3B",
+}
+
+-- function to check if hwid is in the whitelist
+local function isHwidWhitelisted(hwid)
+    for _, v in ipairs(hwidWhitelist) do
+        if v == hwid then
+            return true
+        end
+    end
+    return false
+end
